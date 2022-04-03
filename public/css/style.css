@@ -1,0 +1,592 @@
+body {
+  margin         : 0;
+  padding        : 0;
+  scroll-behavior: smooth;
+  font-family    : 'Baloo Bhai 2', cursive;
+}
+
+:root {
+  --fsize: 1.2rem;
+}
+
+/* navbar */
+.navbar::before {
+  content         : "";
+  background-color: #ffffff;
+  background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+  position        : absolute;
+  top             : 0;
+  left            : 0;
+  width           : 100%;
+  height          : 100%;
+  opacity         : 0.4;
+  z-index         : -1;
+}
+
+.navbar {
+
+
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+}
+
+.navbar ul {
+  display: flex;
+
+  justify-content: center;
+  align-items    : center;
+
+  width: 33%;
+}
+
+.navbar ul li {
+  list-style: none;
+  margin    : 12px;
+  padding   : 12px;
+
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color          : black;
+  font-size      : 1.2rem;
+  position       : relative;
+  letter-spacing : .15rem;
+}
+
+.navbar ul li a::before,
+.navbar ul li a::after {
+  content         : "";
+  background-color: black;
+  width           : 100%;
+  position        : absolute;
+  left            : 0;
+  transform       : scale(0);
+  height          : 2px;
+  transition      : 0.4s;
+
+}
+
+.navbar ul li a::before {
+  transform-origin: left;
+}
+
+.navbar ul li a::after {
+  bottom          : 0;
+  transform-origin: right;
+}
+
+.navbar ul li a:hover::before,
+.navbar ul li a:hover::after {
+  transform: scale(1);
+}
+
+.navbar .empty {
+  width: 33%;
+
+}
+
+.navbar .user {
+
+  width          : 33%;
+  height         : 100%;
+  display        : flex;
+  justify-content: flex-end;
+  align-items    : center;
+}
+
+.user p {
+  position : relative;
+  top      : 6px;
+  font-size: 1.2rem;
+}
+
+.user i {
+
+  margin: 12px;
+}
+
+.user i:hover {
+  cursor: pointer;
+}
+
+
+/* video-holder */
+
+.video-background-holder {
+  position        : relative;
+  background-color: black;
+  height          : calc(100vh - 72px);
+  min-height      : 25rem;
+
+  width   : 100%;
+  overflow: hidden;
+}
+
+.video-background-holder video {
+  position         : absolute;
+  top              : 50%;
+  left             : 50%;
+  min-width        : 100%;
+  min-height       : 100%;
+  width            : auto;
+  height           : auto;
+  z-index          : 0;
+  -ms-transform    : translateX(-50%) translateY(-50%);
+  -moz-transform   : translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform        : translateX(-50%) translateY(-50%);
+}
+
+.video-background-content {
+  position: relative;
+  z-index : 2;
+
+}
+
+.video-background-overlay {
+  position        : absolute;
+  top             : 0;
+  left            : 0;
+  height          : 100%;
+  width           : 100%;
+  background-color: black;
+  opacity         : 0.4;
+  z-index         : 1;
+
+}
+
+.custom-shape-divider-bottom-1636583225 {
+  position   : absolute;
+  bottom     : 0;
+  left       : 0;
+  width      : 100%;
+  overflow   : hidden;
+  line-height: 0;
+  transform  : rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1636583225 svg {
+  position: relative;
+  display : block;
+  width   : calc(100% + 1.3px);
+  height  : 150px;
+}
+
+.custom-shape-divider-bottom-1636583225 .shape-fill {
+  fill: white;
+}
+
+/* top-section */
+
+.top-section {
+
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+}
+
+.detail {
+
+  height         : 400px;
+  display        : flex;
+  flex-direction : column;
+  justify-content: center;
+  align-items    : center;
+  padding        : 20px;
+
+}
+
+.detail .tim {
+
+  display        : flex;
+  flex-direction : column;
+  justify-content: center;
+  align-items  : center;
+  font-size      : var(--fsize);
+}
+
+.detail .obuttons {
+  width : 60%;
+  margin: 20px;
+
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+  font-size      : var(--fsize);
+}
+
+.obuttons .bt {
+  background-color: white;
+
+  border       : transparent;
+  border-radius: 20px;
+  box-shadow   : rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+
+  transform : scale(1);
+  width     : 25%;
+  margin    : 14px;
+  padding   : 12px;
+  transition: 0.3s;
+}
+
+.obuttons .bt:hover {
+  transform: scale(1.1);
+}
+
+
+.bg {
+  background           : url("../images/bg2.jpg");
+  background-size      : cover;
+  background-position  : center;
+  background-attachment: fixed;
+  background-repeat    : no-repeat;
+  height               : 500px;
+
+
+}
+
+.special {
+
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+  letter-spacing : 0.15rem;
+  padding        : 12px;
+  color          : black;
+}
+
+
+.project1{
+  /* border: 2px solid red; */
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.project1 .radius{
+  border-radius: 20px;
+  text-align: center;
+  border-color: transparent;
+}
+.radius:focus{
+  outline: none;
+}
+.project1 form{
+  height: 100%;
+  width: 30%;
+  /* border: 2px solid green; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  border-radius: 20px;
+}
+
+.project1 form .label-h{
+  margin: 15px;
+  font-size: 1.5rem;
+}
+.project1 form .label-o{
+  font-size: 1.2rem;
+}
+.project1 form .butt{
+
+  margin: 12px;
+  background-color: whitesmoke;
+  border-color: transparent;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-size: 1.2rem;
+
+}
+.project1 form .butt:hover{
+  transform: scale(0.9);
+}
+
+.project1 form .box-btn{
+  margin: 20px;
+  width: 100%;
+  height: 20%;
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+/* slider */
+
+.slider {
+  height         : 500px;
+  width          : 100%;
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+  color          : black;
+}
+
+.base {
+  width : 100%;
+  height: 500px;
+}
+
+.glide__slides img {
+  width : 100%;
+  height: 100%;
+}
+
+.slider .glide__slide {
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+
+}
+
+
+
+/* cards */
+
+.box::before {
+  content         : "";
+  position        : absolute;
+  top             : 0;
+  left            : 0;
+  width           : 100%;
+  height          : 100%;
+  background-color: black;
+  background-color: #f1f2f6;
+  background-image: linear-gradient(315deg, #f1f2f6 0%, #c9c6c6 74%);
+
+  border-radius: 20px;
+  clip-path    : polygon(0 47%, 100% 27%, 100% 70%, 100% 100%, 0 100%, 0 74%);
+  clip-path    : polygon(0 58%, 100% 33%, 100% 83%, 100% 100%, 0 100%, 0 85%);
+  clip-path    : circle(57.7% at 15% 44%);
+  clip-path    : circle(64.9% at 29% 43%);
+
+}
+
+.box {
+  margin: 60px;
+  height       : 420px;
+  width        : 300px;
+  border-radius: 20px;
+  box-shadow   : rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow   : rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  position     : relative;
+}
+
+.box .top::before {
+  content         : "";
+  position        : absolute;
+  top             : 0;
+  left            : 0;
+  width           : 100%;
+  height          : 100%;
+  background-color: black;
+  opacity         : 0.2;
+  border-radius   : 20px 20px 0px 0px;
+}
+
+.box .top {
+  height       : 40%;
+  width        : 100%;
+  position     : relative;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.box .top img {
+  height       : 100%;
+  width        : 100%;
+  object-fit   : cover;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.box .bottom {
+  height        : 60%;
+  width         : 100%;
+  display       : flex;
+  flex-direction: column;
+  align-items   : center;
+  border-radius : 0px 0px 20px 20px;
+
+  background-color: white;
+
+}
+
+.bottom img {
+  width    : 20%;
+  height   : 20%;
+  position : relative;
+  top      : -35px;
+  transform: rotate(-10deg);
+}
+
+.bottom .text {
+  display        : flex;
+  flex-direction : column;
+  justify-content: space-around;
+  align-items    : center;
+  z-index        : 3;
+
+
+}
+
+.text h2,
+p {
+  margin        : 0;
+  letter-spacing: 0.1rem;
+  font-size     : 1.3rem;
+}
+
+.text p {
+  color: coral;
+}
+
+.bottom .btn {
+  position       : relative;
+  top            : 5rem;
+  width          : 70%;
+  display        : flex;
+  justify-content: space-around;
+  align-items    : center;
+  height         : 20%;
+}
+
+.btn .bn {
+  width           : 40%;
+  background-color: transparent;
+  border-radius   : 20px;
+  height          : 70%;
+  font-family     : 'Baloo 2', cursive;
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+}
+
+
+/* footer */
+.footer {
+  display         : flex;
+  flex-flow       : row wrap;
+  padding         : 50px;
+  color           : #fff;
+  background-color: black;
+}
+
+.footer>* {
+  flex: 1 100%;
+}
+
+.l-footer {
+  margin-right : 1.25em;
+  margin-bottom: 2em;
+}
+
+.l-footer img {
+  width : 50px;
+  height: 50px;
+}
+
+.r-footer h2 {
+  font-weight: 400;
+  font-size  : 15px;
+}
+
+.footer ul {
+  list-style  : none;
+  padding-left: 0;
+}
+
+.footer li {
+  line-height: 2em;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.r-footer {
+  display  : flex;
+  flex-flow: row wrap;
+}
+
+.r-footer>* {
+  flex        : 1 50%;
+  margin-right: 1.25em;
+}
+
+.box1 a {
+  color: #999;
+}
+
+.h-box {
+  column-count: 2;
+  column-gap  : 1.25em;
+}
+
+.b-footer {
+  text-align : center;
+  color      : #999;
+  padding-top: 50px;
+}
+
+.l-footer p {
+  padding-right: 20%;
+  color        : #999;
+}
+
+@media screen and (min-width: 600px) {
+  .r-footer>* {
+    flex: 1;
+  }
+
+  .features {
+    flex-grow: 2;
+  }
+
+  .l-footer {
+    flex: 1 0px;
+  }
+
+  .r-footer {
+    flex: 2 0px;
+  }
+  .special2{
+    display        : flex;
+  justify-content: center;
+  align-items    : center;
+  letter-spacing : 0.15rem;
+  padding        : 12px;
+  color          : black;
+  }
+  .button1{
+  
+      background-color: #30165a; 
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      display:flex;
+      font-size: 20px;
+      margin: auto;
+      cursor: pointer;
+      align-self:center;
+      border: 4px solid rgb(138, 135, 135);
+      padding:10px 25px;
+    }
+    .project{
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+      width: 50vw;
+       margin-left : 25vw;
+       margin-right: 25vw;
+       
+    }
+
+   
+    }
